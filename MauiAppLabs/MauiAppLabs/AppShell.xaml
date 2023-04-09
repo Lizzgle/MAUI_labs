@@ -6,7 +6,8 @@
     xmlns:local="clr-namespace:MauiAppLabs"
     xmlns:lab1="clr-namespace:MauiAppLabs.Calculator"
     xmlns:lab2="clr-namespace:MauiAppLabs.Sinus"
-    xmlns:lab3="clr-namespace:MauiAppLabs.Tourism">
+    xmlns:lab3="clr-namespace:MauiAppLabs.Tourism"
+    xmlns:lab4="clr-namespace:MauiAppLabs.Converter">
 
     <FlyoutItem Title="Main">
         <ShellContent
@@ -34,6 +35,13 @@
         Title="Tourism"
         ContentTemplate="{DataTemplate lab3:TourismView}"
         Route="Tourism" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Converter">
+        <ShellContent
+        Title="Converter"
+        ContentTemplate="{DataTemplate lab4:ConverterView}"
+        Route="Converter" />
     </FlyoutItem>
 
 </Shell>
