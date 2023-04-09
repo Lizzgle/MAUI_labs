@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppLabs.Calculator.Calculator1"
+             Title="Calculator">
+    <Grid
+            ColumnSpacing="5"
+            RowSpacing="8"
+            Padding="5"
+            BackgroundColor="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <Label 
+                x:Name="Input"
+                Text=""
+                FontSize="Medium"
+                TextColor="White" 
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Center"
+                Grid.Column="0" 
+                Grid.Row="0" 
+                Grid.ColumnSpan="4" />
+
+        <Label 
+                x:Name="Result"
+                Text="0"
+                FontSize="Large"
+                TextColor="White" 
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Center"
+                Grid.Column="0" 
+                Grid.Row="1" 
+                Grid.ColumnSpan="4" />
+
+        <Button 
+                Text="%"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#dcdcdc" 
+                Grid.Column="0" 
+                Grid.Row="2"
+                Clicked="PercentButtonClicked"/>
+
+        <Button 
+                x:Name="mod"
+                Text="mod"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#dcdcdc" 
+                Grid.Column="1" 
+                Grid.Row="2"
+                Clicked="ModButtonClicked"/>
+
+        <Button 
+                Text="C"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#dcdcdc" 
+                Grid.Column="2" 
+                Grid.Row="2"
+                Clicked="CButtonClicked"/>
+
+        <Button 
+                Text="⌫"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#ffa500" 
+                Grid.Column="3" 
+                Grid.Row="2"
+                Clicked="DeButtonClicked"/>
+
+
+
+        <Button 
+                x:Name="UnaryOperation"
+                Text="1/x"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#dcdcdc" 
+                Grid.Column="0" 
+                Grid.Row="3"
+                Clicked="ReverseButtonClicked"/>
+
+        <Button 
+                Text="x²"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#dcdcdc" 
+                Grid.Column="1" 
+                Grid.Row="3"
+                Clicked="PowButtonClicked"/>
+
+        <Button 
+                Text="√x"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#dcdcdc" 
+                Grid.Column="2" 
+                Grid.Row="3"
+                Clicked="SqrtButtonClicked"/>
+
+        <Button 
+                Text="/"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#ffa500" 
+                Grid.Column="3" 
+                Grid.Row="3"
+                Clicked="DelButtonClicked"/>
+
+
+
+        <Button 
+                x:Name="Number7"
+                Text="7"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="0" 
+                Grid.Row="4"
+                Clicked="NumberButtonClicked"/>
+
+        <Button 
+                x:Name="Number8"
+                Text="8"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="1" 
+                Grid.Row="4"
+                Clicked="NumberButtonClicked"/>
+
+        <Button 
+                x:Name="Number9"
+                Text="9"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="2" 
+                Grid.Row="4"
+                Clicked="NumberButtonClicked"/>
+
+        <Button 
+                Text="*"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#ffa500" 
+                Grid.Column="3" 
+                Grid.Row="4"
+                Clicked="MulButtonClicked"/>
+
+
+
+        <Button 
+                x:Name="Number4"
+                Text="4"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="0" 
+                Grid.Row="5"
+                Clicked="NumberButtonClicked"/>
+
+        <Button 
+                x:Name="Number5"
+                Text="5"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="1" 
+                Grid.Row="5"
+                Clicked="NumberButtonClicked"/>
+
+        <Button 
+                x:Name="Number6"
+                Text="6"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="2" 
+                Grid.Row="5"
+                Clicked="NumberButtonClicked"/>
+
+        <Button 
+                Text="-"
+                TextColor="#363636"
+                FontSize="25"
+                BackgroundColor="#ffa500" 
+                Grid.Column="3" 
+                Grid.Row="5"
+                Clicked="MinusButtonClicked"/>
+
+
+
+        <Button 
+                x:Name="Number1"
+                Text="1"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="0" 
+                Grid.Row="6"
+                Clicked="NumberButtonClicked"/>
+
+        <Button 
+                x:Name="Number2"
+                Text="2"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="1" 
+                Grid.Row="6"
+                Clicked="NumberButtonClicked"/>
+
+        <Button 
+                x:Name="Number3"
+                Text="3"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="2" 
+                Grid.Row="6"
+                Clicked="NumberButtonClicked"/>
+
+        <Button 
+                Text="+"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#ffa500" 
+                Grid.Column="3" 
+                Grid.Row="6"
+                Clicked="PlusButtonClicked"/>
+
+
+
+        <Button 
+                Text="+/-"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="0" 
+                Grid.Row="7"
+                Clicked="ModulButtonClicked"/>
+
+        <Button 
+                x:Name="Number0"
+                Text="0"
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="1" 
+                Grid.Row="7"
+                Clicked="NumberButtonClicked"/>
+
+        <Button 
+                Text=","
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#8f8f8f" 
+                Grid.Column="2" 
+                Grid.Row="7"
+                Clicked="DoubleButtonClicked"/>
+
+        <Button 
+                Text="="
+                TextColor="#363636"
+                FontSize="20"
+                BackgroundColor="#ffa500" 
+                Grid.Column="3" 
+                Grid.Row="7"
+                Clicked="EqualButtonClicked"/>
+    </Grid>
+</ContentPage>
