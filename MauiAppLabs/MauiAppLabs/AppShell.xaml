@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiAppLabs"
     xmlns:lab1="clr-namespace:MauiAppLabs.Calculator"
-    xmlns:lab2="clr-namespace:MauiAppLabs.Sinus">
+    xmlns:lab2="clr-namespace:MauiAppLabs.Sinus"
+    xmlns:lab3="clr-namespace:MauiAppLabs.Tourism">
 
     <FlyoutItem Title="Main">
         <ShellContent
@@ -26,6 +27,13 @@
         Title="Process Bar"
         ContentTemplate="{DataTemplate lab2:ProgressBar}"
         Route="Progress Bar" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Tourism">
+        <ShellContent
+        Title="Tourism"
+        ContentTemplate="{DataTemplate lab3:TourismView}"
+        Route="Tourism" />
     </FlyoutItem>
 
 </Shell>

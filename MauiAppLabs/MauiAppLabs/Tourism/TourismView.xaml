@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppLabs.Tourism.TourismView"
+             Title="TourismView">
+    <StackLayout Padding="4">
+        <Picker x:Name="TouristRoutesPicker" Title="Туристические маршруты"
+                SelectedIndexChanged="TouristRoutesPicker_SelectedIndexChanged"
+                MinimumWidthRequest="200" HorizontalOptions="Center" FontSize="18"
+                ItemsSource="{Binding Path=TouristRoutes}"
+                ItemDisplayBinding="{Binding Name}">
+        </Picker>
+
+        <Label LineBreakMode="WordWrap" HorizontalOptions="Center" FontSize="18"
+               MinimumWidthRequest="200" MaximumWidthRequest="350"
+               Text="{Binding Path=Output}">
+        </Label>
+
+        <ListView ItemsSource="{Binding Path=Attractions}"
+                  HorizontalOptions="Center"
+                  MinimumWidthRequest="200" MaximumWidthRequest="350"
+                  SeparatorColor="Black">
+        </ListView>
+    </StackLayout>
+</ContentPage>
