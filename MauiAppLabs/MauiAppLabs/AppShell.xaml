@@ -5,18 +5,27 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiAppLabs"
     xmlns:lab1="clr-namespace:MauiAppLabs.Calculator"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:lab2="clr-namespace:MauiAppLabs.Sinus">
 
-    <!--<ShellContent
+    <FlyoutItem Title="Main">
+        <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />-->
+        Route="MainPage" />
+    </FlyoutItem>
 
     <FlyoutItem Title="Calculator">
         <ShellContent
         Title="Calculator"
         ContentTemplate="{DataTemplate lab1:Calculator1}"
         Route="Calculator" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Process Bar">
+        <ShellContent
+        Title="Process Bar"
+        ContentTemplate="{DataTemplate lab2:ProgressBar}"
+        Route="Progress Bar" />
     </FlyoutItem>
 
 </Shell>
